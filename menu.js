@@ -47,7 +47,7 @@ module.exports = function (appInfo) {
             label: '页面',
             submenu: [
                 {
-                    label: '返回上级',
+                    label: '返回',
                     click: () => {
                         appInfo.mainWindow.webContents.goBack();
                     }
@@ -56,16 +56,6 @@ module.exports = function (appInfo) {
                     label: '退出',
                     click: () => {
                         appInfo.app.exit();
-                    }
-                },
-                {
-                    label: '最大化', click: () => {
-                        appInfo.mainWindow.maximize();
-                    }
-                },
-                {
-                    label: '最小化', click: () => {
-                        appInfo.mainWindow.unmaximize();
                     }
                 }
             ]
