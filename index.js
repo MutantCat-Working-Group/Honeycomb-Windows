@@ -11,7 +11,7 @@ app.on('ready', () => {
     mainWindow = new BrowserWindow({
         width: 1400, height: 800, webPreferences: { nodeIntegration: true }
     })
-    mainWindow.loadURL('https://www.baidu.com/')
+    mainWindow.loadURL('http://www.mutantcat.org/')
     require('./menu.js')({app:app,mainWindow:mainWindow})
     mainWindow.on('close', () => {
         mainWindow = null
