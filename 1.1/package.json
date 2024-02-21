@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "electron ."
+  },
+  "name": "honeycomb",
+  "version": "1.1.20240221",
+  "description": "mutantcat",
+  "main": "index.js",
+  "repository": "https://github.com/MutantCat-Working-Group/Honeycomb-PC",
+  "author": "mutantcat",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.0.0"
+  }
+}
