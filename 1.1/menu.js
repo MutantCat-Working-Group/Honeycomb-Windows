@@ -1,10 +1,10 @@
 module.exports = function (appInfo) {
     var electron = require('electron');
-    const path = require ('path');
+    const path = require('path');
     const Menu = electron.Menu;
     var app = electron.app
     var exePath = path.dirname(app.getPath('exe'));
-    console.log("程序路径"+exePath);
+    console.log("程序路径" + exePath);
     var toolist = path.join(exePath, 'toolist.txt');
     //读取list中的内容
     var fs = require('fs');
@@ -31,9 +31,13 @@ module.exports = function (appInfo) {
         var tool = result[i].split(',');
         var name = tool[0];
         let url = tool[1]; // 使用let关键字声明url变量
-        tools.push({ label: name, click: () => { appInfo.mainWindow.loadURL(url) } });
+        tools.push({
+            label: name, click: () => {
+                if (url != "-") { appInfo.mainWindow.loadURL(url) }
+            }
+        });
     }
-    if(tools.length==0){
+    if (tools.length == 0) {
         tools.push({ label: '请在同级目录下创建toolist.txt', click: () => { appInfo.mainWindow.loadURL('https://www.baidu.com/') } });
     }
 
